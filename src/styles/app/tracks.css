@@ -1,0 +1,33 @@
+.list {
+  list-style: none;
+  padding: 0;
+}
+
+.track {
+  padding: 1rem;
+  color: #fff;
+  border-bottom: 1px solid rgba(33, 33, 33, 0.3);
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: max-content max-content auto;
+  grid-gap: 1rem;
+  align-items: center;
+}
+
+.track:hover {
+  background-color: rgba(40, 103, 224, 0.1);
+}
+
+.selected {
+  composes: track;
+  color: #fce997;
+}
+
+.artist {
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+}
+
+.button {
+  cursor: pointer;
+}
