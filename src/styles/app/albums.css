@@ -1,0 +1,18 @@
+.albums {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-gap: 0.8rem;
+  justify-items: center;
+}
+
+@media (max-width: 1200px) {
+    .albums {
+      grid-template-columns: repeat(6, 1fr);
+    }
+  }
+
+@media (max-width: 600px) {
+  .albums {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
