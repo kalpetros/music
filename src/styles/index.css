@@ -2,3 +2,17 @@
   font-family: 'NotoSans';
   src: url(../assets/fonts/NotoSans-Regular.ttf);
 }
+
+:global(#root) {
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 1) 50%,
+    rgba(10, 1, 60, 0.5) 85%
+  );
+}
+
+body {
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: NotoSans;
+}
