@@ -5,8 +5,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
+import { Container } from './components/Container';
+
 const App = () => {
-  return <div></div>;
+  return <Container></Container>;
 };
 
 ReactDOM.render(<App />, document.getElementById('root'));
