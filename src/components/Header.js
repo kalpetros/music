@@ -1,9 +1,16 @@
 import styles from '../styles/components/header.css';
 
-import React from 'react';
+import React, { useContext } from 'react';
+
+import { AlbumContext } from '../store/AlbumContext';
 
 export const Header = () => {
+  const { selectedAlbum } = useContext(AlbumContext);
   let title = 'Albums';
+
+  if (Object.keys(selectedAlbum).length > 0) {
+    title = selectedAlbum.title;
+  }
 
   return (
     <header className={styles.header}>
