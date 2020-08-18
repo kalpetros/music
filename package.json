@@ -1,0 +1,49 @@
+{
+  "name": "music",
+  "version": "1.0.0",
+  "description": "A small music app",
+  "main": "index.js",
+  "author": "Petros Kalogiannakis <github@petroskal.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "parcel build src/index.html",
+    "develop": "parcel src/index.html",
+    "format": "prettier \"**/*.{js, html}\" --write",
+    "lint": "eslint \"**/*.js\"",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.11.1",
+    "@babel/preset-env": "^7.11.0",
+    "@babel/preset-react": "^7.10.4",
+    "@testing-library/jest-dom": "^5.11.3",
+    "@testing-library/react": "^10.4.8",
+    "autoprefixer": "^9.8.6",
+    "eslint": "^7.6.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-react": "^7.20.6",
+    "eslint-plugin-react-hooks": "^4.0.8",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^26.4.0",
+    "parcel-bundler": "^1.12.4",
+    "postcss-modules": "^3.2.0",
+    "prettier": "^2.0.5"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.30",
+    "@fortawesome/free-brands-svg-icons": "^5.14.0",
+    "@fortawesome/free-regular-svg-icons": "^5.14.0",
+    "@fortawesome/free-solid-svg-icons": "^5.14.0",
+    "@fortawesome/react-fontawesome": "^0.1.11",
+    "moment": "^2.27.0",
+    "normalize.css": "^8.0.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-router-dom": "^5.2.0"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "\\.css$": "identity-obj-proxy"
+    }
+  }
+}
