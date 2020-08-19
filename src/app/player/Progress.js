@@ -21,5 +21,4 @@ export const Progress = (props) => {
 
 Progress.propTypes = {
   value: PropTypes.number.isRequired,
-  info: PropTypes.object.isRequired,
 };
