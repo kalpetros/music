@@ -1,0 +1,32 @@
+.track {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: max-content;
+  grid-gap: 1rem;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.cover {
+  height: 3rem;
+  width: 3rem;
+}
+
+.cover img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.title {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.artist {
+  font-size: 0.8rem;
+  color: #9e9e9e;
+  margin-top: 0.5rem;
+}

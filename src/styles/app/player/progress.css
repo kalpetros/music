@@ -1,0 +1,34 @@
+.progress {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+
+.tracking {
+  background-color: rgba(40, 103, 224, 0.2);
+  height: 100%;
+  width: 0;
+  transition: width 0.5s linear;
+}
+
+.base {
+  background-color: rgba(33, 33, 33, 0.1);
+  position: absolute;
+  height: 10px;
+  width: 100%;
+  top: -10px;
+  cursor: pointer;
+}
+
+.base:hover {
+  background-color: rgba(33, 33, 33, 0.2);
+}
+
+.handle {
+  background-color: rgba(40, 103, 224, 0.2);
+  height: 100%;
+  width: 0;
+  transition: width 0.5s linear;
+}
