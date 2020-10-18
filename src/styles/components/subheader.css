@@ -1,0 +1,17 @@
+.subheader {
+    height: 10rem;
+    z-index: 1;
+  }
+  
+  .subheader h1 {
+    font-size: 3rem;
+    color: #fff;
+  }
+  
+  .content {
+    height: 100%;
+    display: grid;
+    align-content: center;
+    position: relative;
+  }
+  

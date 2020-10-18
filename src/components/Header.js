@@ -6,7 +6,7 @@ import { AlbumContext } from '../store/AlbumContext';
 
 export const Header = () => {
   const { selectedAlbum } = useContext(AlbumContext);
-  let title = 'Albums';
+  let title = 'Home';
 
   if (Object.keys(selectedAlbum).length > 0) {
     title = selectedAlbum.title;

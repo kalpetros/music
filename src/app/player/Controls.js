@@ -1,15 +1,19 @@
 import styles from '../../styles/app/player/controls.css';
 
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 
 import { faPlayCircle } from '@fortawesome/free-regular-svg-icons';
 import { faPauseCircle } from '@fortawesome/free-solid-svg-icons';
 import { faStepForward } from '@fortawesome/free-solid-svg-icons';
 import { faStepBackward } from '@fortawesome/free-solid-svg-icons';
+import { faSyncAlt } from '@fortawesome/free-solid-svg-icons';
+import { faRandom } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export const Controls = (props) => {
+  const [loop, setLoop] = useState(false);
+  const [shuffle, setShuffle] = useState(false);
   const { selectedTrack, info, setSelectedTrack } = props;
   let inProgress = false;
 
@@ -20,6 +24,18 @@ export const Controls = (props) => {
       }
     }
   }, [info]);
+
+  const handleLoop = () => {
+    if (Object.keys(selectedTrack).length > 0) {
+      const audio = info.element;
+      audio.loop = loop ? false : true;
+      setLoop((s) => (s ? false : true));
+    }
+  };
+
+  const handleShuffle = () => {
+    setShuffle((s) => (s ? false : true));
+  };
 
   const handlePlay = () => {
     if (Object.keys(selectedTrack).length > 0) {
@@ -57,8 +73,12 @@ export const Controls = (props) => {
         (i) => i.id === selectedTrack.track.id
       );
 
-      if (currentIndex < tracks.length - 1) {
-        const track = tracks[currentIndex + 1];
+      if (currentIndex < tracks.length - 1 || shuffle) {
+        let index = currentIndex + 1;
+        if (shuffle) {
+          index = Math.floor(Math.random() * (tracks.length - 1));
+        }
+        const track = tracks[index];
         const state = { track: track, album: selectedTrack.album };
         setSelectedTrack(state);
       }
@@ -71,6 +91,15 @@ export const Controls = (props) => {
 
   return (
     <div className={styles.controls}>
+      <div>
+        <FontAwesomeIcon
+          icon={faSyncAlt}
+          color={loop ? '#fce997' : '#fff'}
+          size="1x"
+          className={styles.button}
+          onClick={handleLoop}
+        />
+      </div>
       <div>
         <FontAwesomeIcon
           icon={faStepBackward}
@@ -96,6 +125,15 @@ export const Controls = (props) => {
           size="1x"
           className={styles.button}
           onClick={handleNext}
+        />
+      </div>
+      <div>
+        <FontAwesomeIcon
+          icon={faRandom}
+          color={shuffle ? '#fce997' : '#fff'}
+          size="1x"
+          className={styles.button}
+          onClick={handleShuffle}
         />
       </div>
     </div>

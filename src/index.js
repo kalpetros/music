@@ -11,8 +11,8 @@ import { Container } from './components/Container';
 import { Main } from './components/Main';
 import { Layout } from './components/Layout';
 import { Header } from './components/Header';
+import { Home } from './app/Home';
 import { Player } from './app/player/Player';
-import { Albums } from './app/Albums';
 import { Tracks } from './app/Tracks';
 
 const App = () => {
@@ -26,7 +26,7 @@ const App = () => {
               <Layout>
                 <Switch>
                   <Route path="/album/:id" component={Tracks} />
-                  <Route path="/" component={Albums} />
+                  <Route path="/" component={Home} />
                 </Switch>
               </Layout>
             </Main>

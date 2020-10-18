@@ -16,7 +16,7 @@ export const Player = () => {
 
   return (
     <div className={styles.player}>
-      <Progress value={getProgress(trackInfo)} />
+      <Progress value={getProgress(trackInfo)} info={trackInfo} />
       <TrackInfo selectedTrack={selectedTrack} />
       <Controls
         selectedTrack={selectedTrack}

@@ -1,9 +1,13 @@
 .header {
   height: 10rem;
-  background: linear-gradient(180deg, #000 25%, rgba(10, 1, 60, 0) 85%);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.8) 55%,
+    rgba(10, 1, 60, 0) 85%
+  );
   position: sticky;
   top: 0;
-  z-index: 1;
+  z-index: 2;
 }
 
 .header h1 {
