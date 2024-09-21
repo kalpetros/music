@@ -2,11 +2,7 @@
 
 ## Getting started
 
-### To run music visit:
-
-**https://eager-swartz-f458e8.netlify.app/**
-
-or run:
+To run the app type:
 
 ```
 $ yarn develop
